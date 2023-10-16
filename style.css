@@ -1,0 +1,65 @@
+:root {
+    --primary: #ACFFF6;
+    --secondary: #33373C;
+    /* --primary-color: #33373C; */
+    /* BackGround */
+    /* Text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#181A20;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* color: var(--primary-white); */
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+    color: #FFFFFF;
+}
+
+body {
+    /* background-color: var(--site-main-background); */
+}
+@font-face {
+    font-family: "Druk Wide Bold";
+    src: local("Druk Wide Bold"),
+        url("../../fonts/Druk\ Wide\ Bold.otf") format("woff");
+}
+
+.dark-gray{
+    color: rgba(244, 244, 244, 0.30);
+}
+
+.primary{
+    color: #ACFFF6;
+}
+.primary-bg{
+    background-color: #ACFFF6;
+}
+.bg-img{
+    background-image: url('./assets/imgs/BG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85vh;
+}
