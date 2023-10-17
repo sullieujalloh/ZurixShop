@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/tailwindcss@latest/dist/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <!-- tailwind link -->
     <link rel="stylesheet" href="style.css">
     <title>ZurixShop</title>
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="m-auto text-center w-10/12">
-                    <h1 class="text-1xl font-bold tracking-tight text-white sm:text-7xl"><span
+                    <h1 class="text-1xl font-bold tracking-tight text-white sm:text-6xl"><span
                             class="primary">Zurix</span> where you find every
                         account you <span class="primary underline">need.</span></h1>
                     <p class="mt-6 w-6/12 m-auto text-white text-sm	">The #1 account shop providing the best prices and
@@ -74,19 +74,19 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <input class="dark-bg flex-grow outline-none px-2 dark-gray text-sm" type="text"
+                        <input class="dark-bg flex-grow border-none outline-none focus:ring-transparent px-2 dark-gray text-sm" type="text"
                             placeholder="Search..." />
                     </div>
                     <div class="ms:flex items-center px-2 rounded-lg">
                         <select id="Com"
-                            class="text-sm text-left dark-gray dark-bg outline-none pl-2 pr-12 py-2 rounded-lg">
+                            class="text-sm text-left dark-gray dark-bg border-none focus:ring-transparent outline-none pl-2 pr-12 py-2 rounded-lg">
                             <option value="com" selected>Category</option>
                             <option value="net">net</option>
                             <option value="org">org</option>
                             <option value="io">io</option>
                         </select>
                         <select id="Com"
-                            class="text-sm text-left dark-gray dark-bg outline-none pl-2 pr-12 py-2 rounded-lg">
+                            class="text-sm text-left dark-gray dark-bg border-none focus:ring-transparent outline-none pl-2 pr-12 py-2 rounded-lg">
                             <option value="com" selected>Filter by</option>
                             <option value="net">net</option>
                             <option value="org">org</option>
@@ -416,99 +416,281 @@
             order
             from the easiest and the fastest</p>
 
+        <div id="accordion-color" data-accordion="collapse" data-active-classes="">
 
-
-
-        <div id="accordion-color" data-accordion="collapse"
-            data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
             <h2 id="accordion-color-heading-1">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                    data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    data-accordion-target="#accordion-color-body-1" aria-expanded="false"
                     aria-controls="accordion-color-body-1">
-                    <span>What is Flowbite?</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
+                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="main-bg rounded p-2 rotate-180">
+                        <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </span>
                 </button>
             </h2>
             <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive
-                        components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
+                <div class="p-5 dark-bg">
+                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                        adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
+                        volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
+                        neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
+                        egestas ut venenatis. In mauris non diam neque metus.
                     </p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
-                            href="/docs/getting-started/introduction/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start
-                        developing websites even faster with components on top of Tailwind CSS.</p>
                 </div>
             </div>
+
             <h2 id="accordion-color-heading-2">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-2" aria-expanded="false"
                     aria-controls="accordion-color-body-2">
-                    <span>Is there a Figma file available?</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
+                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="main-bg rounded p-2 rotate-180">
+                        <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </span>
                 </button>
             </h2>
             <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
-                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using
-                        the Figma software so everything you see in the library has a design equivalent in our Figma
-                        file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
-                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on
-                        the utility classes from Tailwind CSS and components from Flowbite.</p>
+                <div class="p-5 dark-bg">
+                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                        adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
+                        volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
+                        neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
+                        egestas ut venenatis. In mauris non diam neque metus.
+                    </p>
                 </div>
             </div>
+
             <h2 id="accordion-color-heading-3">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-3" aria-expanded="false"
                     aria-controls="accordion-color-body-3">
-                    <span>What are the differences between Flowbite and Tailwind UI?</span>
-                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 5 5 1 1 5" />
-                    </svg>
+                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="main-bg rounded p-2 rotate-180">
+                        <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </span>
                 </button>
             </h2>
             <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
-                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
-                        from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
-                        Another difference is that Flowbite relies on smaller and standalone components, whereas
-                        Tailwind UI offers sections of pages.</p>
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
-                        Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the
-                        best of two worlds.</p>
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                    <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                        <li><a href="https://flowbite.com/pro/"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                        <li><a href="https://tailwindui.com/" rel="nofollow"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                    </ul>
+                <div class="p-5 dark-bg">
+                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                        adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
+                        volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
+                        neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
+                        egestas ut venenatis. In mauris non diam neque metus.
+                    </p>
                 </div>
             </div>
+
+            <h2 id="accordion-color-heading-4">
+                <button type="button"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    data-accordion-target="#accordion-color-body-4" aria-expanded="true"
+                    aria-controls="accordion-color-body-4">
+                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="main-bg rounded p-2 rotate-180">
+                        <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-3">
+                <div class="p-5 dark-bg">
+                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                        adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
+                        volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
+                        neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
+                        egestas ut venenatis. In mauris non diam neque metus.
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-
-
-
     </div>
 
 
-    <script src="https://unpkg.com/tailwindcss@latest/dist/tailwind.min.js"></script>
+    <footer class="mt-10 dark-bg">
+        <div class="mx-auto w-9/12 max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
 
+                <div class="flex justify-between flex-wrap w-full">
+                    <div class="mb-6 md:mb-0">
+                        <a href="" class="flex items-center">
+                            <img src="./assets/logo.png" class="h-6 mr-3" alt="FlowBite Logo" />
+                        </a>
+                        <p class="text-xs text-white mt-2">The #1 Account Shop In The Market</p>
+                        <a href="#"
+                            class="flex justify-center items-center rounded-md px-1 py-4 mt-5 primary main-bg"><img
+                                src="./assets/icons/telegram.png" alt="" class="mr-1">Join My Telegram</a>
+
+                        <div class="flex space-x-2 justify-start">
+                            <a href="#"
+                                class="main-bg rounded-md mt-4 px-1 flex justify-center items-center text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    viewBox="0 0 50 50" fill="none">
+                                    <rect width="50" height="50" rx="8" fill="#181A20" />
+                                    <path
+                                        d="M22.4172 28.1814L22.0202 33.7654C22.5882 33.7654 22.8342 33.5214 23.1292 33.2284L25.7922 30.6834L31.3102 34.7244C32.3222 35.2884 33.0352 34.9914 33.3082 33.7934L36.9302 16.8214L36.9312 16.8204C37.2522 15.3244 36.3902 14.7394 35.4042 15.1064L14.1142 23.2574C12.6612 23.8214 12.6832 24.6314 13.8672 24.9984L19.3102 26.6914L31.9532 18.7804C32.5482 18.3864 33.0892 18.6044 32.6442 18.9984L22.4172 28.1814Z"
+                                        fill="#F4F4F4" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="p-1 main-bg rounded-md mt-4 px-3 flex justify-center items-center text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="19"
+                                    viewBox="0 0 24 19" fill="none">
+                                    <g clip-path="url(#clip0_464_1028)">
+                                        <path
+                                            d="M20.317 1.65557C18.7873 0.953692 17.147 0.436576 15.4319 0.140403C15.4007 0.134687 15.3695 0.148971 15.3534 0.177541C15.1424 0.552756 14.9087 1.04225 14.7451 1.427C12.9004 1.15083 11.0652 1.15083 9.25832 1.427C9.09465 1.0337 8.85248 0.552756 8.64057 0.177541C8.62449 0.149924 8.59328 0.13564 8.56205 0.140403C6.84791 0.43563 5.20756 0.952745 3.67693 1.65557C3.66368 1.66129 3.65233 1.67082 3.64479 1.68319C0.533392 6.33155 -0.31895 10.8657 0.0991801 15.3436C0.101072 15.3655 0.11337 15.3864 0.130398 15.3997C2.18321 16.9073 4.17171 17.8225 6.12328 18.4291C6.15451 18.4386 6.18761 18.4272 6.20748 18.4015C6.66913 17.7711 7.08064 17.1063 7.43348 16.4073C7.4543 16.3664 7.43442 16.3178 7.39186 16.3016C6.73913 16.054 6.1176 15.7521 5.51973 15.4093C5.47244 15.3816 5.46865 15.314 5.51216 15.2816C5.63797 15.1873 5.76382 15.0893 5.88396 14.9902C5.90569 14.9721 5.93598 14.9683 5.96153 14.9797C9.88928 16.773 14.1415 16.773 18.023 14.9797C18.0485 14.9674 18.0788 14.9712 18.1015 14.9893C18.2216 15.0883 18.3475 15.1873 18.4742 15.2816C18.5177 15.314 18.5149 15.3816 18.4676 15.4093C17.8697 15.7588 17.2482 16.054 16.5945 16.3006C16.552 16.3168 16.533 16.3664 16.5538 16.4073C16.9143 17.1054 17.3258 17.7701 17.7789 18.4005C17.7978 18.4272 17.8319 18.4386 17.8631 18.4291C19.8241 17.8225 21.8126 16.9073 23.8654 15.3997C23.8834 15.3864 23.8948 15.3664 23.8967 15.3445C24.3971 10.1676 23.0585 5.67064 20.3482 1.68414C20.3416 1.67082 20.3303 1.66129 20.317 1.65557ZM8.02002 12.617C6.8375 12.617 5.86313 11.5313 5.86313 10.1981C5.86313 8.86477 6.8186 7.77912 8.02002 7.77912C9.23087 7.77912 10.1958 8.8743 10.1769 10.1981C10.1769 11.5313 9.22141 12.617 8.02002 12.617ZM15.9947 12.617C14.8123 12.617 13.8379 11.5313 13.8379 10.1981C13.8379 8.86477 14.7933 7.77912 15.9947 7.77912C17.2056 7.77912 18.1705 8.8743 18.1516 10.1981C18.1516 11.5313 17.2056 12.617 15.9947 12.617Z"
+                                            fill="#F4F4F4" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_464_1028">
+                                            <rect width="24" height="18.5915" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="p-2 main-bg rounded-md mt-4 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.05705 23.5714L6.8999 25.5H22.3285V23.5714H8.05705Z" fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M26.3145 4.32849L22.0288 12.5142L23.2288 12.5571L21.0859 21.5999L23.3574 21.6428L25.5002 12.5999H26.7431L26.3145 4.32849Z"
+                                        fill="#F4F4F4" />
+                                    <path
+                                        d="M23.3911 21.6137L21.2236 21.0955L20.3268 24.847L22.4944 25.3651L23.3911 21.6137Z"
+                                        fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M22.4572 25.4999L21.7715 25.3713L21.9001 24.8571L22.5429 25.0713L22.4572 25.4999Z"
+                                        fill="#F4F4F4" />
+                                    <path d="M22.4573 25.2428H21.8145V25.4571H22.4573V25.2428Z" fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.1572 16.8429L10.7144 23.6143H15.5572L13.1572 16.8429Z" fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.84277 4.28571V6.21428H22.1142L23.2713 4.28571H7.84277Z" fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.043 8.14282H6.77157L4.62871 17.1857H3.42871L3.81443 25.4571L8.10014 17.2714L6.90014 17.2285L9.043 8.14282Z"
+                                        fill="#F4F4F4" />
+                                    <path
+                                        d="M6.74851 8.13707L8.91602 8.65521L9.8128 4.90376L7.64529 4.38561L6.74851 8.13707Z"
+                                        fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.67165 4.28571L8.35737 4.41428L8.27165 4.92856L7.58594 4.71428L7.67165 4.28571Z"
+                                        fill="#F4F4F4" />
+                                    <path d="M8.31424 4.28571H7.67139V4.49999H8.31424V4.28571Z" fill="#F4F4F4" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.6143 6.17139L17.0143 12.9428L19.4143 6.17139H14.6143Z" fill="#F4F4F4" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Streaming</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Sports</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Education</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">VPN</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Music</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Gaming</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Adult</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Torrents</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">MyAccount</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Orders</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Settings</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Tickets</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white text-sm font-light">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class=""></span>
+                <div>
+                    <p class="text-white text-xs mb-2 font-semibold">We accept the follwoing</p>
+                    <span class="flex mt-4 space-x-4 sm:justify-start sm:mt-0">
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src="./assets/imgs/cashapp 1.png" class="w-12" alt="">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src="./assets/imgs/bitcoin-1 1.png" class="w-12" alt="">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src="./assets/imgs/ethereum 1.png" class="w-12" alt="">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src="./assets/imgs/usdcoin 1.png" class="w-12" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 
 </body>
 

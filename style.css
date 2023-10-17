@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color:#181A20;
+    background-color: #181A20;
 }
 
 h2,
@@ -21,7 +21,6 @@ h3,
 h4,
 h5,
 h6 {
-    /* color: var(--primary-white); */
 }
 
 ul {
@@ -33,67 +32,105 @@ a {
 }
 
 input:focus {
-    outline: none;
+    outline: none !important;
     color: #FFFFFF;
 }
 
 body {
     /* background-color: var(--site-main-background); */
+    /* font-family: "Druk Wide Bold"; */
 }
-@font-face {
-    font-family: "Druk Wide Bold";
-    src: local("Druk Wide Bold"),
-        url("../../fonts/Druk\ Wide\ Bold.otf") format("woff");
+*{
+    /* font-family: "Druk Wide Bold"; */
+
 }
 
-.main-bg{
-    background-color: #181A20;
+@font-face {
+    font-family: "Druk Wide Bold";
+    src: url("./assets/font/Druk\ Wide\ Bold.ttf");
 }
-.main-clr{
+
+.Druk-Wide-Bold{
+    font-family: "Druk Wide Bold";
+}
+
+.main-bg {
+    background-color: #181A20 !important;
+}
+
+.main-clr {
     color: #181A20;
 }
-.dark-gray{
+
+.dark-gray {
     color: rgba(244, 244, 244, 0.30);
 }
 
-.primary{
+.gray-bg {
+    background-color: rgba(244, 244, 244, 0.30);
+}
+
+.primary {
     color: #ACFFF6;
 }
-.primary-bg{
-    background-color: #ACFFF6;
+
+.primary-bg {
+    background-color: #ACFFF6 !important;
 }
-.dark-bg{
-    background-color:#0B0E11;
+
+.dark-bg {
+    background-color: #0B0E11 !important;
 }
-.white-light{
+
+.white-light {
     color: #F4F4F4;
 }
-.bg-img{
+
+.yellow {
+    background-color: #FCD535;
+}
+
+.bg-img {
     background-image: url('./assets/imgs/BG.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 85vh;
 }
-.btn-hover:hover{
+
+.btn-hover:hover {
     background-color: transparent;
     color: #ACFFF6;
     border: 1px solid #ACFFF6;
     transition: 0.5s ease-in-out;
 }
+
+.btn-hover-trans:hover {
+    background-color: transparent !important;
+    color: #ACFFF6;
+    border: 1px solid #ACFFF6;
+    transition: 0.5s ease-in-out;
+}
+
 .path {
     animation: up-down 1s infinite;
-  }
-  
-  @keyframes up-down {
+}
+
+@keyframes up-down {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
+}
+
+
+.accordion-button[aria-expanded="true"] {
+    border-radius: 0 !important;
+}
