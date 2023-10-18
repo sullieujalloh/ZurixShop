@@ -10,18 +10,33 @@
     <!-- tailwind link -->
     <link rel="stylesheet" href="style.css">
     <title>ZurixShop</title>
+    <style>
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .custom-number-input input:focus {
+            outline: none !important;
+        }
+
+        .custom-number-input button:focus {
+            outline: none !important;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="mx-auto flex justify-center pt-7 pb-7">
-        <img src="./assets/logo.png" alt="" class="w-16 md:w-32 lg:w-48" ">
+        <img src="./assets/logo.png" alt="" class="w-32 md:w-32 lg:w-48 sm:w-48" ">
     </div>
 
     <div class=" flex items-center justify-center bg-img pt-24 pb-24">
         <div class="pb-5">
             <div class="mx-auto">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div class="sm:mb-8 sm:flex sm:justify-center">
                     <div
                         class="relative flex justify-center items-center rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                         <img src="./assets/icons/star.png" alt="" class="w-5 mr-2">
@@ -30,7 +45,7 @@
                 </div>
 
                 <div class="m-auto text-center w-10/12">
-                    <h1 class="text-1xl font-bold tracking-tight text-white sm:text-6xl Druk-Wide-Bold"><span
+                    <h1 class="text-1xl font-bold tracking-tight text-white lg:text-6xl md:text-5xl sm:text-3xl Druk-Wide-Bold"><span
                             class="primary">Zurix</span> where you find every
                         account you <span class="primary underline">need.</span></h1>
                     <p class="mt-6 w-5/12 m-auto text-white text-sm	">The #1 account shop providing the best prices and
@@ -58,7 +73,7 @@
             </div>
         </div>
     </div>
-
+<!-- 
     <div class="m-auto py-10" id="scroll1">
         <h2 class="text-center white-light font-extrabold text-5xl pb-2 Druk-Wide-Bold">Explore Our <span
                 class="primary">Products</span>
@@ -128,10 +143,85 @@
                                     <p class="dark-gray text-xs">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>
 
@@ -161,10 +251,81 @@
                                     <p class="dark-gray text-sm">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -228,10 +389,81 @@
                                     <p class="dark-gray text-sm">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -261,10 +493,81 @@
                                     <p class="dark-gray text-sm">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -328,10 +631,81 @@
                                     <p class="dark-gray text-sm">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -361,10 +735,81 @@
                                     <p class="dark-gray text-sm">(6)</p>
                                 </ul>
                             </div>
-                            <a href="#"
-                                class="main-clr mt-2 flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                                class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
                                 Purchase
-                            </a>
+                            </button>
+
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full h-screen bg-blc">
+                                <div class="relative w-full max-w-md max-h-full dark-bg rounded-lg">
+                                    <div class="text-white font-bold text-lg text-center py-5 shadow-1 Druk-Wide-Bold">
+                                        Add to cart
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg text-center py-5 Druk-Wide-Bold">Netflix
+                                        Full Access</h5>
+                                    <div class="px-5 pb-5">
+                                        <h6 class="text-white font-semibold">Description:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">Netflix full access account
+                                            this means you receive email and password of the
+                                            account.</p>
+                                        <h6 class="text-white font-semibold">Warranty:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">24 hours warranty over
+                                            anything that is not on your end!</p>
+                                        <h6 class="text-white font-semibold">More Information:</h6>
+                                        <p class="text-white text-xs font-light pt-2 pb-2">For your bigger needs you can
+                                            always contact me! Discord: jerryxdfef#2323 //
+                                            Telegram: @Zurix</p>
+                                        <div class="flex justify-between items-center">
+                                            <div class="hw"></div>
+                                            <span class="px-3 text-sm text-white dark-gray">ORDER</span>
+                                            <div class="hw"></div>
+                                        </div>
+
+                                        <select id="new"
+                                            class="w-full text-sm border dark-gray dark-bg focus:ring-transparent outline-none pl-4 py-3 mb-2 rounded-lg">
+                                            <option value="new" selected>Choose one of 7 options</option>
+                                            <option value="net">HD Full Access Netflix
+                                                <span class="flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                        viewBox="0 0 15 15" fill="none">
+                                                        <path
+                                                            d="M14.7897 5.8555H9.2038L7.47842 0.539185L5.74765 5.8555L0.161743 5.85011L4.68547 9.13911L2.9547 14.45L7.47842 11.1664L11.9968 14.45L10.2714 9.13911L14.7897 5.8555Z"
+                                                            fill="#F4F4F4" />
+                                                    </svg>
+                                                    <p>3.2</p>
+                                                </span>
+                                            </option>
+                                            <option value="org">HD Full Access Netflix </option>
+                                            <option value="io">HD Full Access Netflix </option>
+                                        </select>
+
+                                        <div class="h-12">
+                                            <div class="custom-number-input h-8 w-full">
+                                                <div
+                                                    class="flex flex-row justify-center items-center dark-gray-border h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                                    <button data-action="decrement"
+                                                        class="bg-transparent h-full w-20 rounded-l cursor-pointer outline-none">
+                                                        <img src="./assets/imgs/Minus.png" class="ml-6" alt="">
+                                                    </button>
+                                                    <input type="number"
+                                                        class="border-none outline-none focus:outline-none text-center w-full bg-transparent font-semibold text-sm text-white focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                        name="custom-input-number" value="0"></input>
+                                                    <button data-action="increment"
+                                                        class="bg-transparent h-full w-20 rounded-r cursor-pointer">
+                                                        <img src="./assets/imgs/Add New.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="main-clr mt-2 w-full flex border items-center justify-center text-center px-3 py-2 text-sm font-semibold primary-bg rounded-lg btn-hover">
+                                            Purchase
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -687,11 +1132,51 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
 
 
+
+
+
+    <script>
+        function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value--;
+            target.value = value;
+        }
+
+        function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value++;
+            target.value = value;
+        }
+
+        const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+        );
+
+        const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+        );
+
+        decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+        });
+
+        incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+        });
+    </script>
     <!-- Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 

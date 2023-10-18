@@ -37,14 +37,9 @@ a {
     text-decoration: none;
 }
 
-input:focus {
+.input:focus {
     outline: none !important;
     color: #FFFFFF;
-}
-
-* {
-    /* font-family: "Druk Wide Bold"; */
-
 }
 
 @font-face {
@@ -55,7 +50,21 @@ input:focus {
 .Druk-Wide-Bold {
     font-family: "Druk Wide Bold";
 }
+.font-1{
+    font-size: 9px !important;
+}
+.hw{
+    height: 2px !important;
+    width: 100% !important;
+    background-color: rgba(244, 244, 244, 0.30) !important;
+}
+.bg-blc{
+    background-color: #0000009c !important;
+}
 
+.shadow-1{
+    box-shadow: 0px 0px 30px 0px rgba(244, 244, 244, 0.10);
+}
 .main-bg {
     background-color: #181A20 !important;
 }
@@ -65,9 +74,12 @@ input:focus {
 }
 
 .dark-gray {
-    color: rgba(244, 244, 244, 0.30);
+    color: rgba(244, 244, 244, 0.30) !important;
 }
 
+.dark-gray-border {
+    border:1px solid rgba(244, 244, 244, 0.30);
+}
 .gray-bg {
     background-color: rgba(244, 244, 244, 0.30);
 }
@@ -112,6 +124,10 @@ input:focus {
     color: #ACFFF6;
     border: 1px solid #ACFFF6;
     transition: 0.5s ease-in-out;
+}
+
+.red{
+    color: #F6465D;
 }
 
 .path {
