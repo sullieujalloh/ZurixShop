@@ -3,9 +3,6 @@
 :root {
     --primary: #ACFFF6;
     --secondary: #33373C;
-    /* --primary-color: #33373C; */
-    /* BackGround */
-    /* Text */
 }
 
 * {
@@ -50,21 +47,25 @@ a {
 .Druk-Wide-Bold {
     font-family: "Druk Wide Bold";
 }
-.font-1{
-    font-size: 9px !important;
+
+.font-1 {
+    font-size: 9px;
 }
-.hw{
+
+.hw {
     height: 2px !important;
     width: 100% !important;
     background-color: rgba(244, 244, 244, 0.30) !important;
 }
-.bg-blc{
+
+.bg-blc {
     background-color: #0000009c !important;
 }
 
-.shadow-1{
+.shadow-1 {
     box-shadow: 0px 0px 30px 0px rgba(244, 244, 244, 0.10);
 }
+
 .main-bg {
     background-color: #181A20 !important;
 }
@@ -78,8 +79,9 @@ a {
 }
 
 .dark-gray-border {
-    border:1px solid rgba(244, 244, 244, 0.30);
+    border: 1px solid rgba(244, 244, 244, 0.30);
 }
+
 .gray-bg {
     background-color: rgba(244, 244, 244, 0.30);
 }
@@ -126,7 +128,7 @@ a {
     transition: 0.5s ease-in-out;
 }
 
-.red{
+.red {
     color: #F6465D;
 }
 
@@ -151,4 +153,15 @@ a {
 
 .accordion-button[aria-expanded="true"] {
     border-radius: 0 !important;
+}
+
+@media screen and (max-width: 640px) {
+    .bg-img {
+        background-image: url('./assets/imgs/BG.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50vh;
+        display: block;
+    }
 }

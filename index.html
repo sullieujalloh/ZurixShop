@@ -36,7 +36,7 @@
     <div class=" flex items-center justify-center bg-img pt-24 pb-24">
         <div class="pb-5">
             <div class="mx-auto">
-                <div class="sm:mb-8 sm:flex sm:justify-center">
+                <div class="sm:mb-8 sm:flex sm:justify-center mt-1">
                     <div
                         class="relative flex justify-center items-center rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                         <img src="./assets/icons/star.png" alt="" class="w-5 mr-2">
@@ -44,20 +44,23 @@
                     </div>
                 </div>
 
-                <div class="m-auto text-center w-10/12">
-                    <h1 class="text-1xl font-bold tracking-tight text-white lg:text-6xl md:text-5xl sm:text-3xl Druk-Wide-Bold"><span
-                            class="primary">Zurix</span> where you find every
-                        account you <span class="primary underline">need.</span></h1>
-                    <p class="mt-6 w-5/12 m-auto text-white text-sm	">The #1 account shop providing the best prices and
+                <div class="m-auto text-center px-2 sm:w-10/12 ">
+                    <h1
+                        class="text-1xl font-bold tracking-tight text-white lg:text-6xl md:text-5xl sm:text-3xl Druk-Wide-Bold">
+                        <span class="primary">Zurix</span> where you find every
+                        account you <span class="primary underline">need.</span>
+                    </h1>
+                    <p class="mt-2 sm:mt-6 sm:w-5/12 m-auto text-white text-xs px-2 sm:text-sm">The #1 account shop
+                        providing the best prices and
                         the best
                         accounts that will fill your needs in every way imaginable.</p>
                     <div class="mt-6 flex flex-col	items-center justify-center gap-x-6">
                         <a href="#"
-                            class="rounded-md primary-bg flex items-center px-3.5 py-2 text-sm font-semibold text-black shadow-sm hover:primary-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:primary-bg"><img
+                            class="hidden sm:flex rounded-md primary-bg flex items-center px-3.5 py-2 text-xs sm:text-sm font-semibold text-black shadow-sm hover:primary-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:primary-bg"><img
                                 class="pr-1" src="./assets/icons/Box.png" alt="">See All Products</a>
 
-                        <a href="#scroll1">
-                            <svg width="80" height="80" class="mt-10" viewBox="0 0 125 125" fill="none"
+                        <a href="#scroll1" class="">
+                            <svg width="80" height="80" class="mt-0 sm:mt-10" viewBox="0 0 125 125" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="62.5" cy="62.5" r="61.5" stroke="#F4F4F4" stroke-opacity="0.3"
                                     stroke-width="2" />
@@ -73,18 +76,19 @@
             </div>
         </div>
     </div>
-<!-- 
+
     <div class="m-auto py-10" id="scroll1">
-        <h2 class="text-center white-light font-extrabold text-5xl pb-2 Druk-Wide-Bold">Explore Our <span
+        <h2 class="text-center white-light font-extrabold text-1xl sm:text-5xl pb-2 Druk-Wide-Bold">Explore Our <span
                 class="primary">Products</span>
         </h2>
-        <p class="m-auto text-white text-sm	text-center font-normal pb-5">The cheapest and the most used accounts on the
+        <p class="m-auto text-white text-xs sm:text-sm text-center font-normal pb-5">The cheapest and the most used
+            accounts on the
             market.</p>
 
-        <div class="flex justify-center items-center m-auto w-8/12">
+        <div class="flex justify-center items-center m-auto w-11/12 md:w-8/12">
             <div class="container mx-auto">
 
-                <div class="flex items-center rounded-lg overflow-hidden justify-between">
+                <div class=" items-center rounded-lg overflow-hidden justify-between hidden sm:flex">
                     <div class="flex items-center px-2 py-2 dark-bg rounded-lg w-8/12">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-30 dark-gray" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +118,7 @@
                 </div>
 
 
-                <div class="grid grid-cols-3 gap-4 pt-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-6">
 
                     <div class="max-w-sm rounded-lg dark-bg p-3">
                         <a href="#">
@@ -856,11 +860,12 @@
 
     </div>
 
-    <div class="m-auto py-10 w-8/12">
-        <h2 class="text-center white-light font-extrabold text-5xl pb-2 Druk-Wide-Bold">Frequently Asked<span
+    <div class="m-auto py-2 sm:py-10 w-11/12 sm:w-8/12">
+        <h2 class="text-center white-light font-extrabold text-sm sm:text-5xl pb-2 Druk-Wide-Bold">Frequently Asked<span
                 class="primary">Questions</span>
         </h2>
-        <p class="m-auto text-white text-sm	text-center font-normal pb-5 pt-1">because you are so dumb that you cant
+        <p class="m-auto text-white text-xs sm:text-sm	text-center font-normal pb-5 pt-0 sm:pt-1">because you are so
+            dumb that you cant
             order
             from the easiest and the fastest</p>
 
@@ -868,10 +873,10 @@
 
             <h2 id="accordion-color-heading-1">
                 <button type="button"
-                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-2 sm:p-4 mt-2 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-1" aria-expanded="false"
                     aria-controls="accordion-color-body-1">
-                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="text-white font-1 sm:text-base">Nothing happens when I click the buy button.</span>
                     <span class="main-bg rounded p-2 rotate-180">
                         <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
@@ -883,7 +888,7 @@
             </h2>
             <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
                 <div class="p-5 dark-bg">
-                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                    <p class="mb-2 text-white font-1 sm:text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
                         adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
                         volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
                         neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
@@ -894,10 +899,10 @@
 
             <h2 id="accordion-color-heading-2">
                 <button type="button"
-                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-2 sm:p-4 mt-2 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-2" aria-expanded="false"
                     aria-controls="accordion-color-body-2">
-                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="text-white font-1 sm:text-base">Nothing happens when I click the buy button.</span>
                     <span class="main-bg rounded p-2 rotate-180">
                         <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
@@ -909,7 +914,7 @@
             </h2>
             <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                 <div class="p-5 dark-bg">
-                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                    <p class="mb-2 text-white font-1 sm:text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
                         adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
                         volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
                         neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
@@ -920,10 +925,10 @@
 
             <h2 id="accordion-color-heading-3">
                 <button type="button"
-                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-2 sm:p-4 mt-2 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-3" aria-expanded="false"
                     aria-controls="accordion-color-body-3">
-                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="text-white font-1 sm:text-base">Nothing happens when I click the buy button.</span>
                     <span class="main-bg rounded p-2 rotate-180">
                         <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
@@ -935,7 +940,7 @@
             </h2>
             <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
                 <div class="p-5 dark-bg">
-                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                    <p class="mb-2 text-white font-1 sm:text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
                         adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
                         volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
                         neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
@@ -946,10 +951,10 @@
 
             <h2 id="accordion-color-heading-4">
                 <button type="button"
-                    class="accordion-button flex items-center justify-between dark-bg w-full p-4 mt-5 font-medium text-left text-white rounded-lg"
+                    class="accordion-button flex items-center justify-between dark-bg w-full p-2 sm:p-4 mt-2 font-medium text-left text-white rounded-lg"
                     data-accordion-target="#accordion-color-body-4" aria-expanded="true"
                     aria-controls="accordion-color-body-4">
-                    <span class="text-white">Nothing happens when I click the buy button.</span>
+                    <span class="text-white font-1 sm:text-base">Nothing happens when I click the buy button.</span>
                     <span class="main-bg rounded p-2 rotate-180">
                         <svg data-accordion-icon class="w-3 h-3 " aria-hidden=" true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
@@ -961,7 +966,7 @@
             </h2>
             <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-3">
                 <div class="p-5 dark-bg">
-                    <p class="mb-2 text-white text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
+                    <p class="mb-2 text-white font-1 sm:text-sm">Lorem ipsum dolor sit amet consectetur. Ornare est
                         adipiscing a dignissim scelerisque volutpat tristique facilisis egestas. Nulla magnis cursus
                         volutpat volutpat. Vitae consequat dolor vitae sed mattis nulla faucibus lectus lectus. Proin
                         neque enim odio habitasse vitae facilisi elit varius. Nec odio pellentesque hendrerit et augue
@@ -973,13 +978,12 @@
         </div>
     </div>
 
-
     <footer class="mt-10 dark-bg">
-        <div class="mx-auto w-9/12 max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="mx-auto w-11/12 sm:w-9/12 max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
 
                 <div class="flex justify-between flex-wrap w-full">
-                    <div class="mb-6 md:mb-0">
+                    <div class="mt-5 mb-6 md:mb-0">
                         <a href="" class="flex items-center">
                             <img src="./assets/logo.png" class="h-6 mr-3" alt="FlowBite Logo" />
                         </a>
@@ -1052,7 +1056,7 @@
 
                         </div>
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li>
@@ -1081,7 +1085,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">MyAccount</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li>
@@ -1095,7 +1099,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <h2 class="mb-2 text-lg font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li>
@@ -1132,7 +1136,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 
 
