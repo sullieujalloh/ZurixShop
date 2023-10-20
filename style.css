@@ -183,6 +183,166 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 
+
+/* Navigator */
+.navigator-div {
+    width: 500px;
+    margin-top: -40px;
+    padding: 15px 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: #0B0E11;
+    border: 1px solid rgba(244, 244, 244, 0.30);
+}
+
+.navigator-div ul {
+    display: flex;
+    align-items: center;
+    border-right: 3px solid rgba(244, 244, 244, 0.30);
+}
+
+.navigator-div ul li {
+    padding-right: 20px;
+    color: rgba(244, 244, 244, 0.30);
+}
+
+.navigator-div ul li.active {
+    color: #fff;
+}
+
+.narivator-icon-div span {
+    background-color: #181A20;
+    border-radius: 8px;
+}
+
+.sss {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #F6465D !important;
+}
+
+/*  */
+
+
+.addLocationProduct-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    border: 1px solid rgba(244, 244, 244, 0.30);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.addLocationProduct-arrow {
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    transform: rotate(45deg);
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.addLocationProduct-toggle.open .addLocationProduct-arrow {
+    transform: rotate(-135deg);
+}
+
+.addLocationProduct-dropdown-menu {
+    margin-top: 4px;
+    left: 20px;
+    width: 100%;
+    color: #000100;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #0B0E11;
+    border-radius: 12px;
+    max-height: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.addLocationProduct-toggle.open+.addLocationProduct-dropdown-menu {
+    max-height: 200px;
+    overflow-y: none;
+    border: 1px solid rgba(244, 244, 244, 0.30);
+}
+
+.addLocationProduct-option {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.addLocationProduct-sortby-remove-btn {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    color: #FD1B1B;
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: normal;
+    background: rgba(253, 27, 27, 0.15);
+    transition: 0.5s ease-in-out;
+}
+
+.addLocationProduct-sortby-remove-btn:hover {
+    background-color: #222;
+    color: var(--primary-white);
+}
+
+.addLocationProduct-sortby-remove-btn img {
+    margin-right: 5px;
+}
+
+.chooseSeven {
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #0EC66D;
+    font-size: 10px;
+    background: rgba(14, 198, 109, 0.10);
+}
+.chooseSeven-font{
+    font-size: 10px;
+    padding-right: 10px;
+}
+
+.chooseSeven-gold {
+    border-radius: 3px;
+    background: #FCD535;
+}
+
+
 @media screen and (max-width: 640px) {
     .bg-img {
         background-image: url('./assets/imgs/BG.png');
@@ -192,4 +352,32 @@ input[type='number']::-webkit-outer-spin-button {
         height: 50vh;
         display: block;
     }
+
+
+    .navigator-div {
+        width: 300px;
+        padding: 15px 20px;
+        position: fixed;
+        flex-direction: column-reverse;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        background-color: #0B0E11;
+    }
+
+
+    .navigator-div ul {
+        border-right: none;
+    }
+
+    .navigator-div ul li {
+        padding-right: 20px;
+        color: rgba(244, 244, 244, 0.30);
+    }
+
+    .narivator-icon-div {
+        padding-bottom: 15px;
+    }
+
 }
