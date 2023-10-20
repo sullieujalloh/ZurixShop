@@ -11,19 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>ZurixShop</title>
     <style>
-        input[type='number']::-webkit-inner-spin-button,
-        input[type='number']::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
 
-        .custom-number-input input:focus {
-            outline: none !important;
-        }
-
-        .custom-number-input button:focus {
-            outline: none !important;
-        }
     </style>
 </head>
 
@@ -283,7 +271,7 @@
             <div class="w-full sm:w-4/12 py-3 px-4 rounded-lg dark-bg">
                 <h5 class="text-white font-semibold">Order Ticket</h5>
                 <hr class="mt-2 mb-2 border-gray-500">
-                <h6 class="text-white text-xs font-semibold mb-5">Order Summary</h6>
+                <h6 class="text-white text-md font-semibold mb-5">Order Summary</h6>
                 <div class="flex justify-between items-center mt-3">
                     <span class="text-white text-xs">Subtotal</span>
                     <span class="text-white text-xs">$9.55</span>
@@ -298,7 +286,12 @@
                 </div>
                 <hr class="mt-2 mb-2 border-gray-500">
                 <h5 class="text-white font-semibold">Available Payment Methods</h5>
-                <div class="flex justify-between items-center py-2.5 px-2 mt-2 rounded-lg main-bg">
+
+
+
+                <div class="flex justify-between items-center py-2.5 px-2 mt-2 rounded-lg main-bg cursor-pointer"
+                    id="div-1"
+                    onclick="this.classList.toggle('primaryBorder'); document.getElementById('default-radio-1').checked = true; document.getElementById('div-2').classList.remove('primaryBorder');">
                     <div class="flex">
                         <img src="./assets/imgs/bitcoin-1 1.png" class="w-15 h-8" alt="">
                         <span class="flex flex-col justify-between pl-2">
@@ -307,11 +300,14 @@
                         </span>
                     </div>
                     <input id="default-radio-1" type="radio" value="" name="default-radio"
-                        class="w-4 h-4 border-gray-300  focus:bg-transparent dark:bg-gray-700 dark:border-gray-600">
+                        class="primaryBG w-4 h-4 border-gray-300  focus:bg-transparent dark:bg-gray-700 dark:border-gray-600">
                 </div>
-                <div class="flex justify-between items-center py-2.5 px-2 mt-2 rounded-lg main-bg">
+
+                <div class="flex justify-between items-center py-2.5 px-2 mt-2 rounded-lg main-bg main-border cursor-pointer"
+                    id="div-2"
+                    onclick="this.classList.toggle('primaryBorder'); document.getElementById('default-radio-2').checked = true; document.getElementById('div-1').classList.remove('primaryBorder');">
                     <div class="flex">
-                        <img src="./assets/imgs/usdcoin 1.png" class="w-15 h-8" alt="">
+                        <img src="./assets/imgs/Rounded.png" class="w-15 h-8" alt="">
                         <span class="flex flex-col justify-between pl-2">
                             <h5 class="text-white font-bold text-sm">Cashapp</h5>
                             <p class="text-white font-light font-1">Powered By Cash Payments</p>
@@ -319,17 +315,17 @@
                     </div>
                     <p class="red font-1 mb-">+10% gateway fee</p>
 
-                    <input id="default-radio-1" type="radio" value="" name="default-radio"
-                        class="w-4 h-4 border-gray-300  focus:bg-transparent dark:bg-gray-700 dark:border-gray-600">
+                    <input id="default-radio-2" type="radio" value="" name="default-radio"
+                        class="primaryBG w-4 h-4 border-gray-300  focus:bg-transparent dark:bg-gray-700 dark:border-gray-600">
                 </div>
 
-                <hr class="mt-2 mb-2 border-gray-500">
+                <hr class="mt-5 mb-5 border-gray-500">
                 <h5 class="text-white font-semibold">Redeem a coupon</h5>
                 <input
                     class="gray-bg flex-grow border-gray-500 outline-none focus:ring-transparent px-2 py-2.5 main-bg text-xs w-full rounded-md mt-2"
                     type="text" placeholder="e.g. gayzurix" />
 
-                <hr class="mt-2 mb-2 border-gray-500">
+                <hr class="mt-5 mb-5 border-gray-500">
                 <h5 class="text-white font-semibold">Email for Delivery <span class="dark-gray font-1">(CHECK JUNK /
                         SPAM FOLDER)</span></h5>
                 <input
